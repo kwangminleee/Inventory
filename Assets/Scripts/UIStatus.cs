@@ -12,9 +12,10 @@ public class UIStatus : MonoBehaviour
 
     public void SetStatus(Character character)
     {
-        attackText.text = $"{character.Attack}";
-        defenseText.text = $"{character.Defense}";
+        attackText.text = $"{character.GetTotalAttack()}";
+        defenseText.text = $"{character.GetTotalDefense()}";
         healthText.text = $"{character.Health}";
         criticalText.text = $"{character.Critical}";
     }
+
 }
